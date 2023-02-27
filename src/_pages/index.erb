@@ -1,0 +1,39 @@
+---
+layout: default
+name: Jake
+description: |
+  I'm a full-stack developer ready to pursue the technical execution of your next creative idea.
+permalink: /
+---
+
+<div class="mx-auto max-w-7xl lg:px-8 mt-16 sm:mt-32">
+  <div class="relative px-4 sm:px-8 lg:px-12">
+    <div class="mx-auto max-w-2xl lg:max-w-5xl">
+      <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+        <div class="lg:px-20">
+          <div class="max-w-[250px] px-2.5 lg:max-w-[300px]">
+            <figure class="aspect-square">
+              <img src="/images/headshot.jpg" alt="Jake Duchesne" class="sm:-rotate-3 rounded-2xl bg-zinc-100 object-cover object-top">
+              <figcaption class="sr-only">Jake Duchesne</figcaption>
+            </figure>
+          </div>
+        </div>
+    
+        <div class="lg:row-span-2">
+          <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
+          <span class="block">Hey, I'm Jake!</span>
+        </h1>
+    
+        <p class="mt-6 text-2xl text-zinc-600 font-medium"><%= resource.data.description %></p>
+
+        <div class="mt-6 flex gap-6">
+          <% site.data.links.each do |title, social| %>
+            <a href="<%= social %>" aria-label="<%= title %>" class="group -m-1 p-1">
+              <%= svg "/images/icons/#{title}.svg", class: "h-6 w-6 fill-zinc-400 transition group-hover:fill-zinc-600" %>
+            </a>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

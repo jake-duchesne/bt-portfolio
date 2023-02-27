@@ -1,4 +1,6 @@
 /* If you need to add @import statements, do so up here */
+@import "../fonts/Lato/lato.css";
+@import "../fonts/Montserrat/montserrat.css";
 
 @import "jit-refresh.css"; /* triggers frontend rebuilds */
 
