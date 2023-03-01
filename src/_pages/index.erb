@@ -2,7 +2,9 @@
 layout: default
 name: Jake
 description: |
-  I'm a full-stack developer ready to pursue the technical execution of your next creative idea.
+  I'm a full-stack developer bringing the technical execution to amazing products.
+tagline: |
+  Ready to pursue your next creative idea? Get in touch!
 permalink: /
 ---
 
@@ -23,8 +25,10 @@ permalink: /
           <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
           <span class="block">Hey, I'm Jake!</span>
         </h1>
-    
+
         <p class="mt-6 text-2xl text-zinc-600 font-medium"><%= resource.data.description %></p>
+
+        <p class="mt-6 text-2xl text-zinc-600 font-medium"><%= resource.data.tagline %></p>
 
         <div class="mt-6 flex gap-6">
           <% site.data.links.each do |title, social| %>
