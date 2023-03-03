@@ -1,0 +1,56 @@
+---
+layout: default
+title: About
+---
+
+<div class="mx-auto max-w-7xl lg:px-8 mt-16 sm:mt-32">
+  <div class="relative px-4 sm:px-8 lg:px-12">
+    <div class="mx-auto max-w-2xl lg:max-w-5xl">
+      <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-4">
+        <div class="lg:pl-20">
+          <div class="max-w-[250px] px-2.5 lg:max-w-none">
+            <figure>
+              <img src="/images/greatwall.jpg" alt="Jake Duchesne" class="aspect-[4/3] rounded-2xl bg-zinc-100 object-cover object-center">
+              <figcaption class="sr-only">Jake Duchesne</figcaption>
+            </figure>
+          </div>
+        </div>
+    
+        <div class="lg:order-first lg:row-span-2">
+          <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
+            I'm Jake Duchesne, <span class="block">software developer</span> and product engineer.
+          </h1>
+    
+          <div class="prose">
+            <%= render_snippet "about" %>
+          </div>
+        </div>
+
+        <div class="lg:pl-24">
+          <ul role="list">
+            <% site.data.links.each do |title, social| %>
+              <li class="flex mt-4">
+                <a href="<%= social %>" aria-label="<%= title %>" class="group flex items-center text-sm font-medium text-zinc-800 transition hover:text-orange-600">
+                  <span class="sr-only"><%= title %></span>
+                  <%= svg "/images/icons/#{title}.svg", class: "h-6 w-6 flex-none text-zinc-600 transition group-hover:fill-orange-600" %>
+                  <span class="ml-4"><%= title.titleize %></span>
+                </a>
+              </li>
+            <% end %>
+            <li class="flex mt-8 border-t border-zinc-100 pt-8">
+              <a href="mailto:<%= site.metadata.email %>" aria-label="email" class="group flex items-center text-sm font-medium text-zinc-800 transition hover:text-orange-600">
+                <span class="sr-only"></span>
+                <%= svg "/images/icons/mail.svg", class: "h-6 w-6 flex-none text-zinc-600 transition group-hover:fill-orange-600" %>
+                <span class="ml-4">jake14.d@gmail.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+    
+
+      </div>
+      
+
+    </div>
+  </div>
+</div>
