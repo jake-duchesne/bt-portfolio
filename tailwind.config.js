@@ -56,7 +56,7 @@ module.exports = {
           "[class~='lead']": {
             fontSize: theme("fontSize.xl")[0],
             lineHeight: theme("lineHeight.7"),
-            marginTop: theme("spacing.12"),
+            marginTop: theme("spacing.10"),
             marginBottom: theme("spacing.8"),
           },
   

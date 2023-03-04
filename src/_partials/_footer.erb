@@ -1,19 +1,6 @@
-<footer>
-  <div class="mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
-    <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
-      <div class="pb-6">
-        <a class="text-sm leading-6 text-gray-600 hover:text-gray-900" href="<%= relative_url '/about' %>">About</a>
-      </div>
-
-      <div class="pb-6">
-        <a class="text-sm leading-6 text-gray-600 hover:text-gray-900" href="<%= relative_url '/posts' %>">Blog</a>
-      </div>
-
-      <div class="pb-6">
-        <a class="text-sm leading-6 text-gray-600 hover:text-gray-900" href="mailto:<%= metadata.email %>">Contact Me</a>
-      </div>
-    </nav>
-    <div class="mt-10 flex justify-center space-x-10">
+<footer class="bg-white">
+  <div class="mx-auto max-w-7xl py-12 px-6 md:flex md:items-center md:justify-between lg:px-8">
+    <div class="flex justify-center space-x-6 md:order-2">
       <% site.data.links.each do |title, social| %>
         <a href="<%= social %>" aria-label="<%= title %>" class="group -m-1 p-1">
           <span class="sr-only"><%= title %></span>
@@ -23,6 +10,9 @@
         </a>
       <% end %>
     </div>
-    <p class="mt-10 text-center text-xs leading-5 text-gray-500">jake &copy; 2023</p>
+
+    <div class="mt-8 md:order-1 md:mt-0">
+      <p class="text-center text-xs leading-5 text-gray-500">Nothing Changes if Nothing Changes</p>
+    </div>
   </div>
 </footer>
