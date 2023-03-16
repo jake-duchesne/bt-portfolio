@@ -42,4 +42,11 @@ Bridgetown.configure do |config|
   # visit: https://edge.bridgetownrb.com/docs/configuration/initializers/
 
   init :"bridgetown-svg-inliner"
+  init :"bridgetown-view-component"
+
+  hook :loader, :pre_setup do |loader, _|
+    loader.inflector.inflect(
+      "ui" => "UI"
+    )
+  end
 end

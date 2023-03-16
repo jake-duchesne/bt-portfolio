@@ -1,0 +1,11 @@
+class UI::Navigation::Link < BaseComponent
+  attr_reader :title, :href, :current_path
+
+  def initialize(title, href, current_path:)
+    @title, @href, @current_path = title, href, current_path
+  end
+
+  def active?
+    current_path == url_for(href)
+  end
+end

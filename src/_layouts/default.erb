@@ -3,15 +3,24 @@
   <head>
     <%= render "head", metadata: site.metadata, title: data.title %>
   </head>
-  <body class="<%= data.layout %> <%= data.page_class %>">
-    <div class="grid grid-rows-layout min-h-[100dvh]">
-      <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
+  <body class="<%= data.layout %> <%= data.page_class %> bg-zinc-50">
+    <div class="fixed inset-0 flex justify-center sm:px-8">
+      <div class="flex w-full max-w-7xl lg:px-8">
+        <div class="w-full bg-white ring-1 ring-zinc-100"></div>
+      </div>
+    </div>
+    <div class="relative grid grid-rows-layout min-h-[100dvh]">
+      <%= render UI::Header.new(
+        links: site.data.navigation_links, 
+        current_path: resource.permalink, 
+        hide_avatar: resource.data.hide_avatar
+      ) %>
 
       <main>
         <%= yield %>
       </main>
 
-      <%= render "footer", metadata: site.metadata %>
+      <%= render Footer.new(links: site.data.links) %>
     </div>
   </body>
 </html>

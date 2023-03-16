@@ -35,3 +35,5 @@ gem "puma", "~> 5.6"
 gem "nokogiri", "~> 1.14"
 
 gem "bridgetown-svg-inliner", "~> 2.0"
+
+gem "bridgetown-view-component", "~> 2.0"
