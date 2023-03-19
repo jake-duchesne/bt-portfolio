@@ -4,87 +4,103 @@ title: Work
 permalink: /work/
 ---
 <%= render UI::Container.new do %>
-  <%= render WorkCard.new(company: "Nikola", location: "Phoenix, AZ", role: "Software Engineer", start_date: "June 2020", current: true) do |card| %>
+  <%= render WorkCard.new(company: "Nikola", location: "Phoenix, AZ", role: "Software Engineer", start_date: "June 2020", current: true, image: "/images/nikola-logo.svg") do |card| %>
     <%= card.with_tech do %>
       <div class="grid grid-flow-col-dense gap-6 w-fit place-items-center">
-        <%= svg "/images/tech_logos/ruby.svg", class: "w-12 h-12" %>
-        <%= svg "/images/tech_logos/rails.svg", class: "w-12 h-12" %>
-        <%= svg "/images/tech_logos/javascript.svg", class: "w-12 h-12" %>
-        <%= svg "/images/tech_logos/css.svg", class: "w-12 h-12" %>
-        <%= svg "/images/hotwire.svg", class: "w-12 h-12" %>
+        <%= svg "/images/tech_logos/ruby.svg", class: "w-8 h-8" %>
+        <%= svg "/images/tech_logos/rails.svg", class: "w-8 h-8" %>
+        <%= svg "/images/tech_logos/stimulus.svg", class: "w-6 h-6" %>
+        <%= svg "/images/tech_logos/turbo.svg", class: "w-6 h-6" %>
+        <%= svg "/images/tech_logos/tailwind.svg", class: "w-8 h-8" %>
+        <%= svg "/images/tech_logos/vue.svg", class: "w-8 h-8" %>
+        <%= svg "/images/tech_logos/javascript.svg", class: "w-8 h-8" %>
+        <%= svg "/images/tech_logos/css.svg", class: "w-8 h-8" %>
+        <%= svg "/images/tech_logos/html.svg", class: "w-8 h-8" %>
       </div>
     <% end %>
     <%= card.with_description do %>
       
     <% end %>
     <%= card.with_content_section do %>
-      <div class="sm:col-span-2">
-        <div class="flow-root">
-          <ul role="list" class="-mb-8">
-            <li>
-              <div class="relative pb-8">
-                <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                <div class="relative flex space-x-3">
-                  <div>
-                    <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                      <%= svg "/images/generic_icons/double_chevron_up.svg" %>
-                    </span>
-                  </div>
-                  <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                    <div>
-                      <p class="text-sm text-gray-500">Promoted to <span class="font-medium text-gray-900">Software Engineer</span></p>
-                    </div>
-                    <div class="whitespace-nowrap text-right text-sm text-gray-500">
-                      <time datetime="2020-09-28">Jun 2022</time>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-        
-            <li>
-              <div class="relative pb-8">
-                <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                <div class="relative flex space-x-3">
-                  <div>
-                    <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                      <%= svg "/images/generic_icons/double_chevron_up.svg" %>
-                    </span>
-                  </div>
-                  <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                    <div>
-                      <p class="text-sm text-gray-500">Promoted to <a href="#" class="font-medium text-gray-900">Junior Software Engineer</a></p>
-                    </div>
-                    <div class="whitespace-nowrap text-right text-sm text-gray-500">
-                      <time datetime="2020-09-30">Dec 2020</time>
+      <div class="w-full flex justify-between">
+        <details class="break-all w-full group">
+          <summary class="list-none cursor-pointer flex flex-row items-center justify-between">
+            <span>History</span>
+            <%= svg "/images/generic_icons/chevron_down.svg", width: 14, height: 14, class: "group-open:rotate-180" %>
+          </summary>
+
+          <div class="sm:col-span-2">
+            <div class="flow-root">
+              <ul role="list" class="-mb-8">
+                <li>
+                  <div class="relative pb-8">
+                    <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                    <div class="relative flex space-x-3">
+                      <div>
+                        <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                          <%= svg "/images/generic_icons/double_chevron_up.svg" %>
+                        </span>
+                      </div>
+                      <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                        <div>
+                          <p class="text-sm text-gray-500">Promoted to <span class="font-medium text-gray-900">Software Engineer</span></p>
+                        </div>
+                        <div class="whitespace-nowrap text-right text-sm text-gray-500">
+                          <time datetime="2020-09-28">Jun 2022</time>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </li>
-        
-            <li>
-              <div class="relative pb-8">
-                <div class="relative flex space-x-3">
-                  <div>
-                    <span class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
-                      <%= svg "/images/generic_icons/briefcase.svg" %>
-                    </span>
-                  </div>
-                  <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                    <div>
-                      <p class="text-sm text-gray-500">Hired as <a href="#" class="font-medium text-gray-900">Apprentice Software Engineer</a></p>
+                </li>
+            
+                <li>
+                  <div class="relative pb-8">
+                    <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                    <div class="relative flex space-x-3">
+                      <div>
+                        <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                          <%= svg "/images/generic_icons/double_chevron_up.svg" %>
+                        </span>
+                      </div>
+                      <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                        <div>
+                          <p class="text-sm text-gray-500">Promoted to <a href="#" class="font-medium text-gray-900">Junior Software Engineer</a></p>
+                        </div>
+                        <div class="whitespace-nowrap text-right text-sm text-gray-500">
+                          <time datetime="2020-09-30">Dec 2020</time>
+                        </div>
+                      </div>
                     </div>
-                    <div class="whitespace-nowrap text-right text-sm text-gray-500">
-                      <time datetime="2020-10-04">Jun 2020</time>
+                  </div>
+                </li>
+            
+                <li>
+                  <div class="relative pb-8">
+                    <div class="relative flex space-x-3">
+                      <div>
+                        <span class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
+                          <%= svg "/images/generic_icons/briefcase.svg" %>
+                        </span>
+                      </div>
+                      <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                        <div>
+                          <p class="text-sm text-gray-500">Hired as <a href="#" class="font-medium text-gray-900">Apprentice Software Engineer</a></p>
+                        </div>
+                        <div class="whitespace-nowrap text-right text-sm text-gray-500">
+                          <time datetime="2020-10-04">Jun 2020</time>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </details>
       </div>
+      
+      
+      
 
       <div class="sm:col-span-2">
         <dt class="text-sm font-medium text-gray-500">Media</dt>
