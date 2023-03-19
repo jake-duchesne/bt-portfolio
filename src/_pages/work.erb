@@ -22,10 +22,10 @@ permalink: /work/
       
     <% end %>
     <%= card.with_content_section do %>
-      <div class="w-full flex justify-between">
-        <details class="break-all w-full group">
+      <div class="w-full flex justify-between sm:col-span-2">
+        <details class="break-all w-full group" open>
           <summary class="list-none cursor-pointer flex flex-row items-center justify-between">
-            <span class="text-sm font-medium text-gray-500">Role Journey</span>
+            <span class="text-sm font-medium text-gray-500">Timeline</span>
             <%= svg "/images/generic_icons/chevron_down.svg", width: 14, height: 14, class: "group-open:rotate-180" %>
           </summary>
 
@@ -37,7 +37,82 @@ permalink: /work/
                     <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
                     <div class="relative flex space-x-3">
                       <div>
-                        <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                        <span class="h-8 w-8 rounded-full bg-blue-400 flex items-center justify-center ring-8 ring-white">
+                          <%= svg "/images/generic_icons/briefcase.svg" %>
+                        </span>
+                      </div>
+                      <div class="flex flex-col flex-1">
+                        <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                          <div>
+                            <p class="text-sm text-gray-500">Hired as <span class="font-medium text-gray-900">Apprentice Software Engineer</span></p>
+                          </div>
+                          <div class="whitespace-nowrap text-right text-sm text-gray-500">
+                            <time datetime="2020-06">Jun 2020</time>
+                          </div>
+                        </div>
+                        <div class="text-sm break-normal">
+                          <p class="mt-4 mb-2">Initially my job was to ramp up on knowledge and begin contributing to our documentation, website and internal tools.</p>
+                          <ul class="ml-4 list-inside list-disc space-y-1">
+                            <li>Started a documentation reposity for all software teams at Nikola, that lives on to this day.</li>
+                            <li>Responsible for writing technical documentation for software processes, safety and integration.</li>
+                            <li>Updated all 24 microservice repository README's with up-to-date documentation.</li>
+                            <li>Began work on our public website, supporting company initiatives and communication.</li>
+                            <li>Maintained internal employee tooling enabling 500+ employees to share documents and organize teams effectively.</li>
+                            <li>Led an effort to build a web scraping utility to ensure investment activity was available and current.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="relative pb-8">
+                    <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                    <div class="relative flex space-x-3">
+                      <div>
+                        <span class="h-8 w-8 rounded-full bg-green-400 flex items-center justify-center ring-8 ring-white">
+                          <%= svg "/images/generic_icons/double_chevron_up.svg" %>
+                        </span>
+                      </div>
+                      <div class="flex flex-col flex-1">
+                        <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                          <div>
+                            <p class="text-sm text-gray-500">Promoted to <span class="font-medium text-gray-900">Junior Software Engineer</span></p>
+                          </div>
+                          <div class="whitespace-nowrap text-right text-sm text-gray-500">
+                            <time datetime="2020-12">Dec 2020</time>
+                          </div>
+                        </div>
+                        <div class="text-sm break-normal">
+                          <p class="mt-4 mb-2">Having solidified a place for myself on the website team and gaining an incredible amount of Ruby on Rails and web development knowledge in a short period of time, it was time to begin making a bigger impact.</p>
+                          <ul class="ml-4 list-inside list-disc space-y-1">
+                            <li>Continued to maintain our public website, communications and internal tooling for over 1000 employees.</li>
+                            <li>Drove an effort for increased accessibility and performance, increasing Web Vital scores to 100% in both categories.</li>
+                            <li>Increased our test coverage and created CI/CD pipelines for faster deployment.</li>
+                            <li>Rewrote existing API's for job postings, stock data and company media for better reliability.</li>
+                            <li>Launched an entire refresh of website creative elements for our products and services.</li>
+                            <li>Collaborated with design, legal and marketing teams in a cross-functional effort to highlight company initiatives.</li>
+                          </ul>
+                          <p class="mt-4 mb-2">Near the end of 2021, I had the opportunity to begin transitioning teams to work on Nikola Fleet Command, a service that would provide unrivaled connectivity for our vehicles.</p>
+                          <p class="mt-4 mb-2">Fleet Command would make data and diagnostic tools available for our engineers as well as allow our customers to track their fleets, collect data and stay connected. Additionally, we'd implement critical API integration with our vehicles and mobile app; giving us the ability to perform over-the-air updates, issue remote commands and much more.</p>
+                          <p class="mt-4 mb-2">We were setting out to take our proof of concept build from the ground all the way to the cloud.</p>
+                          <ul class="ml-4 list-inside list-disc space-y-1">
+                            <li>Contributed to the creation of RESTful API's for our vehicles and mobile app.</li>
+                            <li>Rehauled the proof of concept frontend, leveraging Hotwire, Tailwind and ViewComponent for rapid iteration and high reusability.</li>
+                            <li>Upgraded application architecture, taking us from Ruby 2.7 and Rails 5.1 to Ruby 3.0 and Rails 6.2.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="relative pb-8">
+                    <div class="relative flex space-x-3">
+                      <div>
+                        <span class="h-8 w-8 rounded-full bg-green-400 flex items-center justify-center ring-8 ring-white">
                           <%= svg "/images/generic_icons/double_chevron_up.svg" %>
                         </span>
                       </div>
@@ -46,48 +121,7 @@ permalink: /work/
                           <p class="text-sm text-gray-500">Promoted to <span class="font-medium text-gray-900">Software Engineer</span></p>
                         </div>
                         <div class="whitespace-nowrap text-right text-sm text-gray-500">
-                          <time datetime="2020-09-28">Jun 2022</time>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-            
-                <li>
-                  <div class="relative pb-8">
-                    <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                    <div class="relative flex space-x-3">
-                      <div>
-                        <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                          <%= svg "/images/generic_icons/double_chevron_up.svg" %>
-                        </span>
-                      </div>
-                      <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                        <div>
-                          <p class="text-sm text-gray-500">Promoted to <a href="#" class="font-medium text-gray-900">Junior Software Engineer</a></p>
-                        </div>
-                        <div class="whitespace-nowrap text-right text-sm text-gray-500">
-                          <time datetime="2020-09-30">Dec 2020</time>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-            
-                <li>
-                  <div class="relative pb-8">
-                    <div class="relative flex space-x-3">
-                      <div>
-                        <span class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
-                          <%= svg "/images/generic_icons/briefcase.svg" %>
-                        </span>
-                      </div>
-                      <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                        <div>
-                          <p class="text-sm text-gray-500">Hired as <a href="#" class="font-medium text-gray-900">Apprentice Software Engineer</a></p>
-                        </div>
-                        <div class="whitespace-nowrap text-right text-sm text-gray-500">
-                          <time datetime="2020-10-04">Jun 2020</time>
+                          <time datetime="2022-06">Jun 2022</time>
                         </div>
                       </div>
                     </div>
@@ -103,7 +137,7 @@ permalink: /work/
       
 
       <div class="sm:col-span-2">
-        <dt class="text-sm font-medium text-gray-500">Media</dt>
+        <dt class="text-sm font-medium text-gray-500">Work in Action</dt>
         <dd class="mt-1 text-sm text-gray-900">
           <ul role="list" class="divide-y divide-gray-200 rounded-md border border-gray-200">
             <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
@@ -114,7 +148,29 @@ permalink: /work/
                 <span class="ml-2 w-0 flex-1 truncate">Driving Change: Engineered Design</span>
               </div>
               <div class="ml-4 flex-shrink-0">
-                <a href="https://youtu.be/S3N8TSulvnM" target="_new" class="font-medium text-indigo-600 hover:text-indigo-500">View</a>
+                <a href="https://youtu.be/S3N8TSulvnM" class="font-medium text-indigo-600 hover:text-indigo-500">View</a>
+              </div>
+            </li>
+            <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
+              <div class="flex w-0 flex-1 items-center">
+                <svg class="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                </svg>             
+                <span class="ml-2 w-0 flex-1 truncate">Nikola Website</span>
+              </div>
+              <div class="ml-4 flex-shrink-0">
+                <a href="https://nikolamotor.com/" class="font-medium text-indigo-600 hover:text-indigo-500">View</a>
+              </div>
+            </li>
+            <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
+              <div class="flex w-0 flex-1 items-center">
+                <svg class="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                </svg>            
+                <span class="ml-2 w-0 flex-1 truncate">Nikola EU Website</span>
+              </div>
+              <div class="ml-4 flex-shrink-0">
+                <a href="https://eu.nikolamotor.com/" class="font-medium text-indigo-600 hover:text-indigo-500">View</a>
               </div>
             </li>
           </ul>

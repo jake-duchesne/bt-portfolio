@@ -13,4 +13,4 @@ When I'm not writing code, you can find me at the ice rink playing hockey or exp
 
 I love to travel, am an avid astrophile and get *way* too excited about a good piña colada.
 
-Most of my time outside of work is spent with my amazing girlfriend and our dog Bondi building our story together. 
+Most of my time outside of work is spent with my girlfriend and our dog Bondi building our story together. 
