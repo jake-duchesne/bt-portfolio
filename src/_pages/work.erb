@@ -3,142 +3,107 @@ layout: default
 title: Work
 permalink: /work/
 ---
-<div class="mx-auto max-w-7xl lg:px-8 mt-16 sm:mt-32">
-  <div class="relative px-4 sm:px-8 lg:px-12">
-    <div class="mx-auto max-w-2xl lg:max-w-5xl">
-      <div class="overflow-hidden bg-white shadow sm:rounded-lg">
-        <div class="px-4 py-5 sm:px-6">
-          <h3 class="text-base font-semibold leading-6 text-gray-900">Nikola</h3>
-          <p class="mt-1 max-w-2xl text-sm text-gray-500">Phoenix, AZ</p>
-        </div>
-        <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
-          <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
-            <div class="sm:col-span-1">
-              <dt class="text-sm font-medium text-gray-500">Role</dt>
-              <dd class="mt-1 text-sm text-gray-900">Software Engineer</dd>
-            </div>
-            <div class="sm:col-span-1">
-              <dt class="text-sm font-medium text-gray-500">Duration</dt>
-              <dd class="mt-1 text-sm text-gray-900">June 2020 - <span class="font-bold">Current</span></dd> <%= %>
-            </div>
-            <div class="sm:col-span-2">
-              <dt class="text-sm font-medium text-gray-500">About</dt>
-              <dd class="mt-1 text-sm text-gray-900">Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.</dd>
-            </div>
-
-            <div class="sm:col-span-2">
-              <div class="flow-root">
-                <ul role="list" class="-mb-8">
-                  <li>
-                    <div class="relative pb-8">
-                      <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                      <div class="relative flex space-x-3">
-                        <div>
-                          <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
-                            </svg>
-                          </span>
-                        </div>
-                        <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                          <div>
-                            <p class="text-sm text-gray-500">Promoted to <a href="#" class="font-medium text-gray-900">Software Engineer</a></p>
-                          </div>
-                          <div class="whitespace-nowrap text-right text-sm text-gray-500">
-                            <time datetime="2020-09-28">Jun 2022</time>
-                          </div>
-                        </div>
-                      </div>
+<%= render UI::Container.new do %>
+  <%= render WorkCard.new(company: "Nikola", location: "Phoenix, AZ", role: "Software Engineer", start_date: "June 2020", current: true) do |card| %>
+    <%= card.with_tech do %>
+      <div class="grid grid-flow-col-dense gap-6 w-fit place-items-center">
+        <%= svg "/images/tech_logos/ruby.svg", class: "w-12 h-12" %>
+        <%= svg "/images/tech_logos/rails.svg", class: "w-12 h-12" %>
+        <%= svg "/images/tech_logos/javascript.svg", class: "w-12 h-12" %>
+        <%= svg "/images/tech_logos/css.svg", class: "w-12 h-12" %>
+        <%= svg "/images/hotwire.svg", class: "w-12 h-12" %>
+      </div>
+    <% end %>
+    <%= card.with_description do %>
+      
+    <% end %>
+    <%= card.with_content_section do %>
+      <div class="sm:col-span-2">
+        <div class="flow-root">
+          <ul role="list" class="-mb-8">
+            <li>
+              <div class="relative pb-8">
+                <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                <div class="relative flex space-x-3">
+                  <div>
+                    <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                      <%= svg "/images/generic_icons/double_chevron_up.svg" %>
+                    </span>
+                  </div>
+                  <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                    <div>
+                      <p class="text-sm text-gray-500">Promoted to <span class="font-medium text-gray-900">Software Engineer</span></p>
                     </div>
-                  </li>
-              
-                  <li>
-                    <div class="relative pb-8">
-                      <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                      <div class="relative flex space-x-3">
-                        <div>
-                          <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                              <path fill-rule="evenodd" d="M11.47 4.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 6.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5zm.53 7.59l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 12.31z" clip-rule="evenodd" />
-                            </svg>
-                            
-                          </span>
-                        </div>
-                        <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                          <div>
-                            <p class="text-sm text-gray-500">Promoted to <a href="#" class="font-medium text-gray-900">Junior Software Engineer</a></p>
-                          </div>
-                          <div class="whitespace-nowrap text-right text-sm text-gray-500">
-                            <time datetime="2020-09-30">Dec 2020</time>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="whitespace-nowrap text-right text-sm text-gray-500">
+                      <time datetime="2020-09-28">Jun 2022</time>
                     </div>
-                  </li>
-              
-                  <li>
-                    <div class="relative pb-8">
-                      <div class="relative flex space-x-3">
-                        <div>
-                          <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
-                            </svg>
-                          </span>
-                        </div>
-                        <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                          <div>
-                            <p class="text-sm text-gray-500">Hired as <a href="#" class="font-medium text-gray-900">Apprentice Software Engineer</a></p>
-                          </div>
-                          <div class="whitespace-nowrap text-right text-sm text-gray-500">
-                            <time datetime="2020-10-04">Jun 2020</time>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-            
-
-
-
-
-
-
-            <div class="sm:col-span-2">
-              <dt class="text-sm font-medium text-gray-500">Attachments</dt>
-              <dd class="mt-1 text-sm text-gray-900">
-                <ul role="list" class="divide-y divide-gray-200 rounded-md border border-gray-200">
-                  <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
-                    <div class="flex w-0 flex-1 items-center">
-                      <svg class="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
-                      </svg>
-                      <span class="ml-2 w-0 flex-1 truncate">resume_back_end_developer.pdf</span>
+            </li>
+        
+            <li>
+              <div class="relative pb-8">
+                <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                <div class="relative flex space-x-3">
+                  <div>
+                    <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                      <%= svg "/images/generic_icons/double_chevron_up.svg" %>
+                    </span>
+                  </div>
+                  <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                    <div>
+                      <p class="text-sm text-gray-500">Promoted to <a href="#" class="font-medium text-gray-900">Junior Software Engineer</a></p>
                     </div>
-                    <div class="ml-4 flex-shrink-0">
-                      <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
+                    <div class="whitespace-nowrap text-right text-sm text-gray-500">
+                      <time datetime="2020-09-30">Dec 2020</time>
                     </div>
-                  </li>
-                  <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
-                    <div class="flex w-0 flex-1 items-center">
-                      <svg class="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
-                      </svg>
-                      <span class="ml-2 w-0 flex-1 truncate">coverletter_back_end_developer.pdf</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+        
+            <li>
+              <div class="relative pb-8">
+                <div class="relative flex space-x-3">
+                  <div>
+                    <span class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
+                      <%= svg "/images/generic_icons/briefcase.svg" %>
+                    </span>
+                  </div>
+                  <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                    <div>
+                      <p class="text-sm text-gray-500">Hired as <a href="#" class="font-medium text-gray-900">Apprentice Software Engineer</a></p>
                     </div>
-                    <div class="ml-4 flex-shrink-0">
-                      <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
+                    <div class="whitespace-nowrap text-right text-sm text-gray-500">
+                      <time datetime="2020-10-04">Jun 2020</time>
                     </div>
-                  </li>
-                </ul>
-              </dd>
-            </div>
-          </dl>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+
+      <div class="sm:col-span-2">
+        <dt class="text-sm font-medium text-gray-500">Media</dt>
+        <dd class="mt-1 text-sm text-gray-900">
+          <ul role="list" class="divide-y divide-gray-200 rounded-md border border-gray-200">
+            <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
+              <div class="flex w-0 flex-1 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
+                </svg>              
+                <span class="ml-2 w-0 flex-1 truncate">Driving Change: Engineered Design</span>
+              </div>
+              <div class="ml-4 flex-shrink-0">
+                <a href="https://youtu.be/S3N8TSulvnM" target="_new" class="font-medium text-indigo-600 hover:text-indigo-500">View</a>
+              </div>
+            </li>
+          </ul>
+        </dd>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
