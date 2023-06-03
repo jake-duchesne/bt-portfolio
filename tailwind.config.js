@@ -15,6 +15,10 @@ module.exports = {
       sans: ['Inter var', ...defaultTheme.fontFamily.sans]
     },
     extend: {
+      colors: {
+        signature: "#FB742D",
+        nikola: "#282D3E"
+      },
       gridTemplateRows: {
         layout: 'auto 1fr auto'
       }
